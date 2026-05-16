@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-[#0A0B0E] text-[#E0E0E0] antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+/* Custom technical styles */
+.grid-lines {
+  background-image: 
+    linear-gradient(to right, rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.mono-all-caps {
+  @apply font-mono text-[10px] uppercase tracking-wider font-semibold text-zinc-500;
+}
+
+.glass-panel {
+  @apply bg-[#121418]/80 backdrop-blur-md border border-[#2A2A2E] shadow-xl transition-all;
+}
+
+.stat-label {
+  @apply font-mono text-[9px] text-zinc-500 uppercase tracking-widest leading-none mb-1;
+}
